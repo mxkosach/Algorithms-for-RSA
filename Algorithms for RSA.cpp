@@ -8,21 +8,21 @@ int main()
 	//int a = 35, b = 15;
 	int a, b, n;
 	char* in = new char[64];
-	/*	cout << "Расширенный алгоритм Евклида\n";
-		cout << "Введите число a: ";
-		cin >> in;
-		a = atoi(in);
-		cout << "Введите число b: ";
-		cin >> in;
-		b = atoi(in);
-		extendedEuclideanAlgorithm(a, b);
-		cout << "*********************************\n";*/
-
-	cout << "Быстрое возведение в степень\n";
-	cout << "Введите число: ";
+	cout << "Extended Euclidean algorithm\n";
+	cout << "Enter the numer a: ";
 	cin >> in;
 	a = atoi(in);
-	cout << "Введите степень: ";
+	cout << "nter the numer b: ";
+	cin >> in;
+	b = atoi(in);
+	extendedEuclideanAlgorithm(a, b);
+	cout << "*********************************\n";
+
+	cout << "Fast Power Algorithm\n";
+	cout << "Enter the number: ";
+	cin >> in;
+	a = atoi(in);
+	cout << "Enter the power: ";
 	cin >> in;
 	n = atoi(in);
 	cout << a << "^" << n << " = " << fastPower(a, n) << endl;
@@ -65,10 +65,9 @@ void extendedEuclideanAlgorithm(int a, int b)
 		y0 = y;
 	}
 
-	int nod = r1;
-	//cout << "Дано: a = " << a << ", " << "b = " << b << endl;
-	cout << "НОД(" << a << ", " << b << ") = " << nod << endl;
-	cout << a << "x" << (b > 0 ? "+" : "") << b << "y=" << nod << endl;
-	cout << "x = " << x1 << " + " << b / nod << "t" << endl;
-	cout << "y = " << y1 << " - " << a / nod << "t" << endl;
+	int gcd = r1;
+	cout << "gcd(" << a << ", " << b << ") = " << gcd << endl;
+	cout << a << "x" << (b > 0 ? "+" : "") << b << "y=" << gcd << endl;
+	cout << "x = " << x1 << " + " << b / gcd << "t" << endl;
+	cout << "y = " << y1 << " - " << a / gcd << "t" << endl;
 }
