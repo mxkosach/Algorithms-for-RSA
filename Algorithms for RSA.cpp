@@ -12,7 +12,7 @@ int main()
 	cout << "Enter the numer a: ";
 	cin >> in;
 	a = atoi(in);
-	cout << "nter the numer b: ";
+	cout << "Enter the numer b: ";
 	cin >> in;
 	b = atoi(in);
 	extendedEuclideanAlgorithm(a, b);
@@ -26,6 +26,9 @@ int main()
 	cin >> in;
 	n = atoi(in);
 	cout << a << "^" << n << " = " << fastPower(a, n) << endl;
+
+	cout << endl;
+	system("pause");
 }
 
 int fastPower(unsigned int a, unsigned int n) {
